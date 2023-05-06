@@ -1,7 +1,3 @@
-Sure, here's an example Github Pages website for CivMC using HTML with the components you requested:
-
-html
-
 <!DOCTYPE html>
 <html>
 <head>
