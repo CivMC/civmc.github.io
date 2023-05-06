@@ -2,89 +2,84 @@
 <html>
 <head>
 	<title>CivMC</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: #8BC34A; /* Green */
-			font-family: Arial, sans-serif;
-			color: #FFF;
-		}
-
+		/* Style for the top section */
 		.top-section {
-			position: relative;
+			background-color: green;
 			height: 600px;
-			background-image: url('Banner.png');
-			background-size: cover;
-			background-position: center center;
-			background-repeat: no-repeat;
-		}
-
-		.overlay {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
+			position: relative;
 			text-align: center;
-			color: #FFF;
+			color: white;
+			font-family: Arial, sans-serif;
 		}
 
-		.logo {
-			display: inline-block;
+		.top-section .background-image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+
+		.top-section .trim {
+			background-color: green;
+			height: 80px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+		}
+
+		.top-section h1 {
+			font-size: 60px;
+			margin-top: 150px;
+			z-index: 2;
+		}
+
+		.top-section img.logo {
 			width: 200px;
-			height: 200px;
-			background-image: url('Server-Icon.png');
-			background-size: contain;
-			background-position: center center;
-			background-repeat: no-repeat;
-			margin-bottom: 20px;
-		}
-
-		.players {
-			display: inline-block;
-			width: 150px;
-			height: 50px;
-			background-color: rgba(255, 255, 255, 0.2);
-			font-size: 16px;
-			padding: 10px;
-			margin: 0 10px;
-			line-height: 30px;
-		}
-
-		.players strong {
-			display: block;
-			font-size: 24px;
-			margin-bottom: 5px;
-		}
-
-		.subtitle {
-			font-size: 40px;
-			margin-bottom: 20px;
-			line-height: 1.2;
-		}
-
-		.server-ip {
-			font-size: 24px;
 			margin-top: 50px;
+			z-index: 2;
+		}
+
+		.top-section .online {
+			font-size: 24px;
+			display: inline-block;
+			margin: 0 20px;
+			z-index: 2;
+		}
+
+		.top-section .slogan {
+			font-size: 48px;
+			margin-top: 50px;
+			z-index: 2;
+		}
+
+		.top-section .server-ip {
+			font-size: 24px;
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 2;
 		}
 	</style>
 </head>
 <body>
-	<section class="top-section">
-		<div class="overlay">
-			<h1>CivMC</h1>
-			<div class="logo"></div>
-			<div class="players">
-				<strong>50</strong>
-				Players online on the server
-			</div>
-			<div class="players">
-				<strong>100</strong>
-				Players online on Discord
-			</div>
-			<div class="subtitle">New horizons for brave pioneers...</div>
-			<div class="server-ip">Server IP: Play.CivMC.Net</div>
-		</div>
-	</section>
+	<div class="top-section">
+		<img src="Img/Banner.png" class="background-image">
+		<div class="trim"></div>
+		<h1>CivMC</h1>
+		<img src="Img/Server-Icon.png" class="logo">
+		<div class="online">(Number) Players online on the server</div>
+		<div class="online">(Number) Players online on Discord</div>
+		<div class="slogan">New horizons for brave pioneers...</div>
+		<div class="server-ip">Server IP: Play.CivMC.Net</div>
+	</div>
 </body>
 </html>
