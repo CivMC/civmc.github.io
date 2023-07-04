@@ -17,6 +17,7 @@
 
     <!-- Custom CSS -->
     <link href="https://civmc.net/css/stylish-portfolio.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -116,8 +117,22 @@
                             </div>
                         </div>
                         <div class="text-center" style="margin: 10px">
-                            <h3>CivClassics is a multiplayer Minecraft server that focuses on civilization-building. Players can form nations, establish governments, build cities, and interact with others. It emphasizes politics, diplomacy, and resource management. The server runs continuously, allowing for long-term gameplay and community engagement. It offers a unique sandbox experience where players can shape their own virtual civilizations within a dedicated and passionate community.</h3>
-                        </div>
+                            <h3>CivMC is a geopolitical Minecraft server focused on <span class="highlight">civilization-building. </span>
+                              Players form <span class="highlight">nations</span> and establish <span class="highlight">governments</span>, <span class="highlight">wars</span> occur, and <span class="highlight">treaties</span> are signed. 
+                              <br>
+                              The server represents the current iteration of a <span class="highlight">long history</span> of civilization servers. 
+                              Veterans of the genre play in old nations with deep lore spanning ages, while new friends have a vast 
+                              unexplored world to discover, coexisting and helping one another to build a <span class="highlight">strong community</span>. 
+                              <br>
+                              The server employs several community-made plugins to facilitate gameplay without mandating role-play.
+                              <span class="highlight">Citadel</span> adds block reinforcement, allowing players to protect their property by using resources to make blocks harder to break. 
+                              <span class="highlight">ExilePearl</span> enables players to imprison law-breakers by killing them while holding an ender pearl. 
+                              <span class="highlight">FactoryMod</span> introduces factories, requiring players to pay a price for their creation but reducing the cost of tool manufacturing. 
+                              <span class="highlight">RealisticBiomes</span> increases the difficulty of crop growth as they can only flourish in their respective biomes. 
+                              However, crops serve as the sole source of experience on the server. 
+                              <span class="highlight">RailSwitch</span> allows the creation of expansive rail networks, while <span class="highlight">Brewery</span> adds a selection of alcoholic beverages with secret recipes that many players aspire to uncover.
+                            </h3>
+                          </div>
                     </div>
                 </div>
         
@@ -143,8 +158,48 @@
                                 <h4 style="color: rgb(53, 50, 218); ">Ban list</h4>
                             </div></a>
                         </div>
+                        
+
                     </div>
                 </div>               
+            </div>
+
+            <!-- Middle column, is a box with rows inside -->
+            <div style="background-color: rgba(255, 255, 255, 0); flex-grow: 1; display: flex; flex-direction: column; align-items: center; gap:20px; justify-content: center; width: 50%;">
+
+                <div style="background-color: rgba(255, 255, 255, 0); flex-grow: 1; display: flex; flex-direction: raw; align-items: center; gap:20px; justify-content: space-between;">
+                    <!-- First row, link to the map -->
+                    <div style="background-color: rgba(255, 255, 255, 0.555); height:auto; border-radius: 20px; max-width: 900px;">
+                        <a href="https://map.civmc.tk/">
+                            <img src="./img/Logo-map.png">
+                        </a>    
+                        <div class="text-center"style="color: black;" >
+                            <h2>Map</h2>
+                        </div>                  
+                    </div>
+            
+                    <!-- Second row, link to server statistics -->
+                    <div style="background-color: rgba(255, 255, 255, 0.555); height:auto; border-radius: 20px; max-width: 900px">
+                        <a href="https://civmc.tk/stats">
+                            <img src="./img/Logo-map.png">
+                        </a>    
+                        <div class="text-center"style="color: black;" >
+                            <h2>Server stats</h2>
+                        </div>                  
+                    </div>              
+                </div>  
+                
+                <div class="text-center" style="margin-left: 20px; padding-left: 5px; padding-top: 10px; background-color: rgba(255, 255, 255, 0.555); border-radius: 20px; display: flex; flex-direction: row; align-items: center ;">
+                    <a href="https://www.patreon.com/Civ_MC" style="margin-right: 10px;">
+                        <img width="100" src="img/Logo-Patreon.svg"/>
+                    </a>
+                    <div style="margin-right: 20px;">
+                        <h3 id="    " style="color: rgb(255, 255, 255); text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">
+                        <!--Filled by Javascript-->
+                        </h3>
+                    </div>
+                </div>
+
             </div>
             <!-- Right column, is a box with rows inside. Discord, Patreon, Reddit -->
             <div style="background-color: rgba(255, 255, 255, 0.555); width: auto; display: inline-flex; justify-content: space-between; flex-direction: column; padding: 20px; align-items:center; border-radius: 20px;">
@@ -220,6 +275,11 @@
     $.getJSON('https://mcapi.us/server/status?ip=play.civmc.net', function(data) {
         $('#ServerInfoContainer').text(`Users Online: ${data.players.now}`);
     });
+
+    //Load Patreon information
+   // $.getJSON('https://mcapi.us/server/status?ip=play.civmc.net', function(data) {
+    //    $('#PatreonInfoContainer').text(`Users Online: ${data.players.now}`);
+   // });
 </script>
 
 
